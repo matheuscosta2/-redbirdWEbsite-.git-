@@ -2,7 +2,10 @@
 require "roda"
 
 class App < Roda
-  
+    plugin :halt
+    plugin :not_found do
+    view("error/404")
+    end
     plugin :partials
     plugin :public
     plugin :render
@@ -13,8 +16,6 @@ class App < Roda
       @greeting_root = "The root page has a simple introduction to what is the RedBird. It has images, texts, and some blog entries. The primary purpose is to present and advertise the engine."
       view("index")
     end
-    
-    
     
       # /root branch
       r.on do
