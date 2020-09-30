@@ -29,6 +29,7 @@ class App < Roda
         # GET /blog request
         r.get "blog" do
             "#{@greeting_blog}!"
+            view('blog')
           end
 
         # GET /doc request
