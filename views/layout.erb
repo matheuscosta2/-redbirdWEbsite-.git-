@@ -2,13 +2,24 @@
 <html>
     <head>
         <meta charset ="UTF-8">
-
-        
+        <link rel="stylesheet" type="text/css "href="../css/websitestyle.css">
         <title>Red Bird</title>
     </head>
+    <body>
+    <header>
+    <ul>
+        <li><a href="/<%= @lang %>">Home</a></li>
+        <li><a href="/<%= @lang %>/blog">Blog</a></li>
+        <li><a href="/<%= @lang %>/doc">Doc</a></li>
+        <li><a href="/<%= @lang %>/source">Source</a></li>
+        <li><a href="/<%= @lang %>/about">About</a></li>
+        <li><a href="/<%= @lang %>/team">Team</a></li>
+    </ul>
+    </header>
 
     <main> 
         <%= yield%> 
     </main>
 
+    </body>
 </html>
